@@ -39,22 +39,18 @@ main {
 
 #our-restaurants {
   background-color: rgb(232, 232, 232);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 #our-restaurants .title-our-rest h1 {
   font-size: 25px;
-  width: 65%;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-#our-restaurants .title-our-rest p {
   width: 75%;
   margin: auto;
+  padding: 20px 0;
+}
+#our-restaurants .title-our-rest p {
+  width: 85%;
+  margin: auto;
+  font-weight: 100;
 }
 #our-restaurants button {
   margin-top: 15px;
@@ -87,15 +83,16 @@ main {
   height: 20px;
   border-radius: 50%;
   position: relative;
-  left: 10px;
+  left: 17px;
   color: white;
 }
 #functioning .step-fonctioning .number p {
-  margin-top: 5px;
+  margin-top: 4px;
 }
 #functioning .step-fonctioning button {
+  margin: auto;
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
-  width: 70%;
+  width: 90%;
   padding: 15px 35px 15px 0px;
   border: none;
   border-radius: 10px;
@@ -108,9 +105,15 @@ main {
 #functioning .step-fonctioning button .last-icon {
   color: #9356dc;
 }
+#functioning .step-fonctioning:last-child button {
+  background-color: rgba(146, 86, 220, 0.2235294118);
+}
 
 #restaurants {
+  background-color: rgba(204, 204, 204, 0.279);
   margin: auto;
+  margin-top: 50px;
+  padding-top: 10px;
   max-width: 768px;
   width: 100%;
 }
