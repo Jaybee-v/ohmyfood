@@ -103,6 +103,9 @@ main {
       position: relative;
       left: 10px;
       color: white;
+      p {
+        margin-top: 5px;
+      }
     }
     button {
       box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
@@ -185,6 +188,7 @@ main {
 }
 
 footer {
+  margin-top: 45px;
   padding: 20px;
   background-color: rgb(50, 50, 50);
   color: white;

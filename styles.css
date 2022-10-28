@@ -90,6 +90,9 @@ main {
   left: 10px;
   color: white;
 }
+#functioning .step-fonctioning .number p {
+  margin-top: 5px;
+}
 #functioning .step-fonctioning button {
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
   width: 70%;
@@ -147,7 +150,7 @@ main {
   cursor: pointer;
   position: relative;
   top: -18px;
-  left: 280px;
+  left: 85%;
   font-size: 25px;
 }
 #restaurants .card-restaurant a .new {
@@ -167,6 +170,7 @@ main {
 }
 
 footer {
+  margin-top: 45px;
   padding: 20px;
   background-color: rgb(50, 50, 50);
   color: white;
