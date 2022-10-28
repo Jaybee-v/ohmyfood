@@ -5,6 +5,28 @@ $primary: #9356dc;
 $secondary: #ff79da;
 $third: #99e2d0;
 
+@mixin button {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(
+    -10deg,
+    rgba(147, 86, 220, 1) 28%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px #ccc, -3px 3px 3px #ccc;
+  cursor: pointer;
+}
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,8 +39,8 @@ body {
   max-width: 700px;
 }
 
-header {
-  .title {
+.header {
+  &__logo {
     padding: 10px 0;
     border-bottom: 2px solid #ccc;
     img {
@@ -28,7 +50,7 @@ header {
       width: 30%;
     }
   }
-  .location {
+  &__location {
     padding: 10px 0;
     text-align: center;
     background-color: rgb(222, 221, 221);
@@ -41,13 +63,12 @@ header {
 main {
   max-width: 768px;
   width: 100%;
-  margin: auto;
 }
 
-#our-restaurants {
+.our-restaurants {
   background-color: rgb(232, 232, 232);
   text-align: center;
-  .title-our-rest {
+  &__title {
     h1 {
       font-size: 25px;
       width: 75%;
@@ -61,36 +82,22 @@ main {
       font-weight: 100;
     }
   }
-  button {
-    margin-top: 15px;
-    margin-bottom: 35px;
-    background: rgb(147, 86, 220);
-    background: linear-gradient(
-      -10deg,
-      rgba(147, 86, 220, 1) 28%,
-      rgba(255, 121, 218, 1) 100%
-    );
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 25px;
-    box-shadow: 2px 2px 2px #ccc, 2px 2px 2px #ccc, 2px 2px 2px #ccc;
-  }
+}
+.btn {
+  @include button;
 }
 
-.title-section {
+.section__title {
   h2 {
     font-size: 15px;
     padding: 30px 20px;
   }
 }
-#functioning {
-  .step-fonctioning {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.functioning {
+  &__step {
+    @include center;
     margin-bottom: 20px;
-    .number {
+    &__number {
       text-align: center;
       font-size: 10px;
       background-color: $primary;
@@ -104,7 +111,7 @@ main {
         margin-top: 4px;
       }
     }
-    button {
+    &__btn {
       margin: auto;
       box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
         -3px 3px 5px rgba(153, 153, 153, 0.267);
@@ -117,29 +124,36 @@ main {
         color: gray;
         padding: 0 20px 0 0;
       }
-      .last-icon {
-        color: $primary;
+
+      &__last {
+        background-color: #9256dc39;
+        margin: auto;
+        box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
+          -3px 3px 5px rgba(153, 153, 153, 0.267);
+        width: 90%;
+        padding: 15px 35px 15px 0px;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        i {
+          color: $primary;
+          padding: 0 20px 0 0;
+        }
       }
     }
   }
-  .step-fonctioning:last-child {
-    button {
-      background-color: #9256dc39;
-    }
-  }
 }
-#restaurants {
+
+.restaurants {
   background-color: rgba(204, 204, 204, 0.279);
   margin: auto;
   margin-top: 50px;
-
   max-width: 768px;
   width: 100%;
-  .card-restaurant {
+  &__card {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    max-width: 768px;
     width: 90%;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgb(153, 153, 153, 0.367),
@@ -147,9 +161,8 @@ main {
     a {
       text-decoration: none;
       color: black;
-      .image {
+      .restaurants__card__image {
         img {
-          max-width: 768px;
           max-height: 180px;
           height: 100%;
           width: 100%;
@@ -157,7 +170,7 @@ main {
           object-fit: cover;
         }
       }
-      .restaurant-text {
+      .restaurants__card__text {
         padding: 15px;
         h3 {
           margin-top: -30px;
@@ -175,7 +188,7 @@ main {
           font-size: 25px;
         }
       }
-      .new {
+      .restaurants__card__new {
         width: fit-content;
         background-color: $third;
         color: #0f8368;
@@ -193,16 +206,16 @@ main {
   margin-top: 35px;
 }
 
-footer {
+.footer {
   margin-top: 45px;
   padding: 20px;
   background-color: rgb(50, 50, 50);
   color: white;
-  .name {
+  &__title {
     font-family: 'Shrikhand';
     margin-bottom: 20px;
   }
-  .part {
+  &__parts {
     ul {
       li {
         font-weight: 500;

@@ -4,12 +4,11 @@
 @import 'styles';
 
 body {
-  background-color: rgba(204, 204, 204, 0.679);
+  background-color: rgba(204, 204, 204, 0.279);
 }
 
-header {
-  display: flex;
-  align-items: center;
+.header {
+  @include center;
   padding: 10px 0 0px 0;
   a {
     text-decoration: none;
@@ -19,8 +18,11 @@ header {
       left: 25px;
     }
   }
+  &__logo {
+    border-bottom: none;
+  }
 }
-#image {
+.image {
   position: sticky;
   z-index: 1;
   img {
@@ -32,71 +34,57 @@ header {
   }
 }
 
-#menu {
+.container__menu {
+  border-radius: 30px 30px 0 0;
   z-index: 999;
-  #title {
-    display: flex;
-    align-items: center;
+  &__title {
+    @include center;
     justify-content: space-between;
     padding: 20px;
     h1 {
       font-family: 'Shrikhand';
     }
-  }
-}
-.meal-title {
-  padding: 0 0 0 5%;
-  text-transform: uppercase;
-  .underline {
-    margin: 5px 0;
-    width: 40px;
-    height: 2px;
-    background-color: $third;
-    margin-bottom: 10px;
-  }
-}
-.meal {
-  box-shadow: 2px 2px 2px #ccc, 2px 2px 2px #ccc, 2px 2px 2px #ccc;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 700px;
-  width: 90%;
-  margin-bottom: 15px;
-  h2 {
-    font-size: 15px;
-  }
-  .description {
-    display: flex;
-    justify-content: space-between;
-    p {
-      margin-top: 5px;
-      font-size: 12px;
-    }
-    .price {
-      font-weight: 800;
+    i {
+      font-size: 20px;
     }
   }
-}
-#command-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  button {
-    margin-top: 15px;
-    margin-bottom: 30px;
-    background: rgb(147, 86, 220);
-    background: linear-gradient(
-      -10deg,
-      rgba(147, 86, 220, 1) 28%,
-      rgba(255, 121, 218, 1) 100%
-    );
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 25px;
+  .menu__title {
+    padding: 0 0 0 5%;
+    text-transform: uppercase;
+    .underline {
+      margin: 5px 0;
+      width: 40px;
+      height: 2px;
+      background-color: $third;
+      margin-bottom: 10px;
+    }
+  }
+  .menu__meal {
     box-shadow: 2px 2px 2px #ccc, 2px 2px 2px #ccc, 2px 2px 2px #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    width: 90%;
+    margin-bottom: 15px;
+    h2 {
+      font-size: 15px;
+    }
+    .description {
+      display: flex;
+      justify-content: space-between;
+      p {
+        margin-top: 5px;
+        font-size: 12px;
+      }
+      .price {
+        font-weight: 800;
+      }
+    }
   }
+}
+.command-btn {
+  @include center;
 }
