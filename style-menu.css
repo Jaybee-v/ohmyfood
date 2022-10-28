@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -147,7 +149,7 @@ main {
   cursor: pointer;
   position: relative;
   top: -18px;
-  left: 280px;
+  left: 85%;
   font-size: 25px;
 }
 #restaurants .card-restaurant a .new {
@@ -184,4 +186,99 @@ footer .part ul li i {
   padding: 0 5px 0 0;
 }
 
-/*# sourceMappingURL=styles.css.map */
+body {
+  background-color: rgba(204, 204, 204, 0.679);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 0px 0;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+header a i {
+  position: relative;
+  left: 25px;
+}
+
+#image {
+  position: sticky;
+  z-index: 1;
+}
+#image img {
+  max-width: 700px;
+  width: 100%;
+}
+
+#menu {
+  z-index: 999;
+}
+#menu #title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#menu #title h1 {
+  font-family: "Shrikhand";
+}
+
+.meal-title {
+  padding: 0 0 0 5%;
+  text-transform: uppercase;
+}
+.meal-title .underline {
+  margin: 5px 0;
+  width: 40px;
+  height: 2px;
+  background-color: #99e2d0;
+  margin-bottom: 10px;
+}
+
+.meal {
+  box-shadow: 2px 2px 2px #ccc, 2px 2px 2px #ccc, 2px 2px 2px #ccc;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  width: 90%;
+  margin-bottom: 15px;
+}
+.meal h2 {
+  font-size: 15px;
+}
+.meal .description {
+  display: flex;
+  justify-content: space-between;
+}
+.meal .description p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.meal .description .price {
+  font-weight: 800;
+}
+
+#command-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#command-btn button {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(-10deg, rgb(147, 86, 220) 28%, rgb(255, 121, 218) 100%);
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px #ccc, 2px 2px 2px #ccc, 2px 2px 2px #ccc;
+}
+
+/*# sourceMappingURL=style-menu.css.map */
