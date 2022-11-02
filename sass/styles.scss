@@ -20,6 +20,16 @@ $third: #99e2d0;
   border-radius: 25px;
   box-shadow: 3px 3px 3px #ccc, -3px 3px 3px #ccc;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(
+      -10deg,
+      rgba(147, 86, 220, 0.8) 28%,
+      rgba(255, 121, 218, 0.8) 100%
+    );
+    box-shadow: 3px 3px 3px rgb(147, 147, 147), -3px 3px 3px rgb(147, 147, 147);
+  }
 }
 @mixin center {
   display: flex;
@@ -33,10 +43,13 @@ $third: #99e2d0;
   box-sizing: border-box;
   list-style: none;
   font-family: 'Roboto';
+  text-decoration: none;
 }
 
 body {
-  max-width: 700px;
+  width: 100%;
+  min-width: none;
+  max-width: 650px;
 }
 
 .header {
@@ -50,7 +63,13 @@ body {
       width: 30%;
     }
   }
-  &__location {
+}
+
+main {
+  max-width: 650px;
+}
+.location {
+  &__div {
     padding: 10px 0;
     text-align: center;
     background-color: rgb(222, 221, 221);
@@ -58,11 +77,6 @@ body {
       padding: 0 15px 0 0;
     }
   }
-}
-
-main {
-  max-width: 768px;
-  width: 100%;
 }
 
 .our-restaurants {
@@ -94,6 +108,10 @@ main {
   }
 }
 .functioning {
+  margin: auto;
+  &__steps {
+    width: 92%;
+  }
   &__step {
     @include center;
     margin-bottom: 20px;
@@ -105,7 +123,7 @@ main {
       height: 20px;
       border-radius: 50%;
       position: relative;
-      left: 17px;
+      left: 5%;
       color: white;
       p {
         margin-top: 4px;
@@ -120,13 +138,15 @@ main {
       border: none;
       border-radius: 10px;
       font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
       i {
         color: gray;
         padding: 0 20px 0 0;
       }
 
       &__last {
-        background-color: #9256dc39;
+        background-color: #9256dc4f;
         margin: auto;
         box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
           -3px 3px 5px rgba(153, 153, 153, 0.267);
@@ -135,10 +155,22 @@ main {
         border: none;
         border-radius: 10px;
         font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
         i {
           color: $primary;
           padding: 0 20px 0 0;
         }
+        &:hover {
+          background-color: #9256dc39;
+          box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.8),
+            -3px 3px 5px rgba(153, 153, 153, 0.8);
+        }
+      }
+      &:hover {
+        background-color: rgba(204, 204, 204, 0.115);
+        box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.8),
+          -3px 3px 5px rgba(153, 153, 153, 0.8);
       }
     }
   }
@@ -208,23 +240,129 @@ main {
 
 .footer {
   margin-top: 45px;
-  padding: 20px;
+  padding: 20px 0;
   background-color: rgb(50, 50, 50);
   color: white;
   &__title {
+    padding-left: 20px;
     font-family: 'Shrikhand';
     margin-bottom: 20px;
   }
   &__parts {
     ul {
+      padding-left: 20px;
       li {
         font-weight: 500;
-        font-size: 10px;
+        font-size: 12px;
         padding: 5px 0;
         i {
-          padding: 0 5px 0 0;
+          padding: 0 5px 0 0px;
+        }
+        a {
+          color: white;
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    max-width: 992px;
+  }
+  .header {
+    &__logo {
+      padding: 50px 0;
+    }
+  }
+  main {
+    max-width: 992px;
+  }
+  .functioning {
+    &__steps {
+      width: 92%;
+      margin: auto;
+    }
+    &__step {
+      width: 50%;
+      padding: 15px 0;
+      &:nth-child(2) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &:nth-child(3) {
+        margin-left: 50%;
+      }
+    }
+  }
+  .section__title {
+    display: flex;
+    justify-content: center;
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .restaurants {
+    &__all {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__card {
+      a {
+        .restaurants__card__new {
+          left: 65%;
+        }
+      }
+    }
+  }
+  .footer {
+    &__title {
+      display: flex;
+      justify-content: center;
+      padding-left: 0px;
+    }
+    &__parts ul {
+      padding-left: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      li {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    max-width: 1440px;
+    margin: auto;
+  }
+  main {
+    max-width: 1440px;
+  }
+  .functioning {
+    &__steps {
+      width: 80%;
+      margin: auto;
+      display: flex;
+    }
+    &__step {
+      width: 50%;
+      padding: 15px 0;
+      &:nth-child(3) {
+        margin-left: auto;
+      }
+    }
+  }
+  .restaurants {
+    max-width: 1440px;
+    padding-bottom: 40px;
+    &__all {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .footer {
+    margin-top: 0;
   }
 }

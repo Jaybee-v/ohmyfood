@@ -4,10 +4,11 @@
 @import 'styles';
 
 body {
-  background-color: rgba(204, 204, 204, 0.279);
+  background-color: rgb(223, 223, 223);
 }
 
 .header {
+  background-color: #fff;
   @include center;
   padding: 10px 0 0px 0;
   a {
@@ -23,10 +24,10 @@ body {
   }
 }
 .image {
-  position: sticky;
-  z-index: 1;
+  height: fit-content;
   img {
-    max-width: 700px;
+    border-radius: -30px;
+    max-width: 992px;
     width: 100%;
     max-height: 250px;
     height: 100%;
@@ -34,57 +35,138 @@ body {
   }
 }
 
-.container__menu {
-  border-radius: 30px 30px 0 0;
-  z-index: 999;
-  &__title {
-    @include center;
-    justify-content: space-between;
-    padding: 20px;
-    h1 {
-      font-family: 'Shrikhand';
-    }
-    i {
-      font-size: 20px;
-    }
-  }
-  .menu__title {
-    padding: 0 0 0 5%;
-    text-transform: uppercase;
-    .underline {
-      margin: 5px 0;
-      width: 40px;
-      height: 2px;
-      background-color: $third;
-      margin-bottom: 10px;
-    }
-  }
-  .menu__meal {
-    box-shadow: 2px 2px 2px #ccc, 2px 2px 2px #ccc, 2px 2px 2px #ccc;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
-    width: 90%;
-    margin-bottom: 15px;
-    h2 {
-      font-size: 15px;
-    }
-    .description {
-      display: flex;
+#menu {
+  width: 100%;
+  display: flex;
+  .menu {
+    margin-top: -50px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    background-color: rgb(223, 223, 223);
+    &__title {
+      @include center;
       justify-content: space-between;
-      p {
-        margin-top: 5px;
-        font-size: 12px;
+      padding: 20px;
+      border-radius: 30px;
+      h1 {
+        font-family: 'Shrikhand';
       }
-      .price {
-        font-weight: 800;
+      i {
+        font-size: 20px;
+      }
+      i.heart-full {
+        display: none;
+      }
+    }
+    &__content {
+      max-width: 650px;
+      width: 100%;
+      &__bloc {
+        .menu__title {
+          padding: 0 0 0 5%;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+          h3 {
+            font-weight: 400;
+            position: relative;
+
+            &::after {
+              content: '';
+              width: 50px;
+              height: 4px;
+              background: #99e2d0;
+              position: absolute;
+              z-index: 20;
+              left: 0px;
+              bottom: -8px;
+            }
+          }
+        }
+      }
+      .menu__meal {
+        box-shadow: 2px 2px 2px #ccc, 2px 2px 2px #ccc, 2px 2px 2px #ccc;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 650px;
+        width: 92%;
+        margin-bottom: 15px;
+        h2 {
+          font-size: 15px;
+        }
+        .description {
+          display: flex;
+          justify-content: space-between;
+          p {
+            margin-top: 5px;
+            font-size: 12px;
+          }
+          .price {
+            font-weight: 800;
+          }
+        }
       }
     }
   }
 }
+
 .command-btn {
   @include center;
+}
+
+@media screen and (min-width: 650px) {
+  #menu {
+    .menu {
+      &__title {
+        margin-left: 50%;
+        transform: translate(-30%);
+        margin-bottom: 20px;
+      }
+      &__content {
+        max-width: 992px;
+        width: 100%;
+      }
+      &__meal {
+        padding: 20px;
+
+        width: 60%;
+
+        h2 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .image {
+    img {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      max-height: 50vh;
+    }
+  }
+  #menu {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    .menu {
+      margin: auto;
+      max-width: 1000px;
+      width: 100%;
+      &__content {
+        max-width: 1400px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        &__meal {
+          width: 92%;
+        }
+      }
+    }
+  }
 }

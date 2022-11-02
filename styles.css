@@ -6,10 +6,13 @@
   box-sizing: border-box;
   list-style: none;
   font-family: "Roboto";
+  text-decoration: none;
 }
 
 body {
-  max-width: 700px;
+  width: 100%;
+  min-width: none;
+  max-width: 650px;
 }
 
 .header__logo {
@@ -22,18 +25,18 @@ body {
   margin-right: auto;
   width: 30%;
 }
-.header__location {
+
+main {
+  max-width: 650px;
+}
+
+.location__div {
   padding: 10px 0;
   text-align: center;
   background-color: rgb(222, 221, 221);
 }
-.header__location i {
+.location__div i {
   padding: 0 15px 0 0;
-}
-
-main {
-  max-width: 768px;
-  width: 100%;
 }
 
 .our-restaurants {
@@ -64,6 +67,12 @@ main {
   border-radius: 25px;
   box-shadow: 3px 3px 3px #ccc, -3px 3px 3px #ccc;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(-10deg, rgba(147, 86, 220, 0.8) 28%, rgba(255, 121, 218, 0.8) 100%);
+  box-shadow: 3px 3px 3px rgb(147, 147, 147), -3px 3px 3px rgb(147, 147, 147);
 }
 
 .section__title h2 {
@@ -71,6 +80,12 @@ main {
   padding: 30px 20px;
 }
 
+.functioning {
+  margin: auto;
+}
+.functioning__steps {
+  width: 92%;
+}
 .functioning__step {
   display: flex;
   justify-content: center;
@@ -85,7 +100,7 @@ main {
   height: 20px;
   border-radius: 50%;
   position: relative;
-  left: 17px;
+  left: 5%;
   color: white;
 }
 .functioning__step__number p {
@@ -99,13 +114,15 @@ main {
   border: none;
   border-radius: 10px;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .functioning__step__btn i {
   color: gray;
   padding: 0 20px 0 0;
 }
 .functioning__step__btn__last {
-  background-color: rgba(146, 86, 220, 0.2235294118);
+  background-color: rgba(146, 86, 220, 0.3098039216);
   margin: auto;
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
   width: 90%;
@@ -113,10 +130,20 @@ main {
   border: none;
   border-radius: 10px;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .functioning__step__btn__last i {
   color: #9356dc;
   padding: 0 20px 0 0;
+}
+.functioning__step__btn__last:hover {
+  background-color: rgba(146, 86, 220, 0.2235294118);
+  box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.8), -3px 3px 5px rgba(153, 153, 153, 0.8);
+}
+.functioning__step__btn:hover {
+  background-color: rgba(204, 204, 204, 0.115);
+  box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.8), -3px 3px 5px rgba(153, 153, 153, 0.8);
 }
 
 .restaurants {
@@ -181,21 +208,114 @@ main {
 
 .footer {
   margin-top: 45px;
-  padding: 20px;
+  padding: 20px 0;
   background-color: rgb(50, 50, 50);
   color: white;
 }
 .footer__title {
+  padding-left: 20px;
   font-family: "Shrikhand";
   margin-bottom: 20px;
 }
+.footer__parts ul {
+  padding-left: 20px;
+}
 .footer__parts ul li {
   font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
   padding: 5px 0;
 }
 .footer__parts ul li i {
-  padding: 0 5px 0 0;
+  padding: 0 5px 0 0px;
+}
+.footer__parts ul li a {
+  color: white;
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    max-width: 992px;
+  }
+  .header__logo {
+    padding: 50px 0;
+  }
+  main {
+    max-width: 992px;
+  }
+  .functioning__steps {
+    width: 92%;
+    margin: auto;
+  }
+  .functioning__step {
+    width: 50%;
+    padding: 15px 0;
+  }
+  .functioning__step:nth-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .functioning__step:nth-child(3) {
+    margin-left: 50%;
+  }
+  .section__title {
+    display: flex;
+    justify-content: center;
+  }
+  .section__title h2 {
+    font-size: 18px;
+  }
+  .restaurants__all {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .restaurants__card a .restaurants__card__new {
+    left: 65%;
+  }
+  .footer__title {
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+  }
+  .footer__parts ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer__parts ul li {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    max-width: 1440px;
+    margin: auto;
+  }
+  main {
+    max-width: 1440px;
+  }
+  .functioning__steps {
+    width: 80%;
+    margin: auto;
+    display: flex;
+  }
+  .functioning__step {
+    width: 50%;
+    padding: 15px 0;
+  }
+  .functioning__step:nth-child(3) {
+    margin-left: auto;
+  }
+  .restaurants {
+    max-width: 1440px;
+    padding-bottom: 40px;
+  }
+  .restaurants__all {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer {
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
