@@ -68,6 +68,7 @@ main {
   box-shadow: 3px 3px 3px #ccc, -3px 3px 3px #ccc;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  font-size: 15px;
 }
 .btn:hover {
   background: rgb(147, 86, 220);
@@ -206,7 +207,7 @@ main {
   position: relative;
   top: -18px;
   left: 85%;
-  font-size: 20px;
+  font-size: 25px;
   transition: 0.5s ease-in-out;
 }
 .restaurants__card a .restaurants__card__text .heart:hover .heart-empty {

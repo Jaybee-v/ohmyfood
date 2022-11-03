@@ -22,6 +22,7 @@ $size: 20vh;
   box-shadow: 3px 3px 3px #ccc, -3px 3px 3px #ccc;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  font-size: 15px;
   &:hover {
     background: rgb(147, 86, 220);
     background: linear-gradient(
@@ -233,7 +234,7 @@ main {
             position: relative;
             top: -18px;
             left: 85%;
-            font-size: 20px;
+            font-size: 25px;
             transition: 0.5s ease-in-out;
           }
           &:hover {
