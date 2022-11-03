@@ -4,6 +4,7 @@
 $primary: #9356dc;
 $secondary: #ff79da;
 $third: #99e2d0;
+$size: 20vh;
 
 @mixin button {
   margin-top: 15px;
@@ -110,7 +111,7 @@ main {
 .functioning {
   margin: auto;
   &__steps {
-    width: 92%;
+    width: 98%;
   }
   &__step {
     @include center;
@@ -263,6 +264,58 @@ main {
         }
       }
     }
+  }
+}
+
+.container__spinner {
+  z-index: 999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  animation-name: container-spinner;
+  animation-duration: 2s;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation-fill-mode: forwards;
+  .spinner {
+    position: absolute;
+    top: calc(50% - #{$size / 2});
+    left: calc(50% - #{$size / 2});
+    width: $size;
+    height: $size;
+    animation: spinner 2s linear infinite;
+    animation-iteration-count: 1;
+    span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .spinner-inner-1 {
+      background: linear-gradient(
+        to right,
+        rgba($primary, 0.5) 0%,
+        rgba($secondary, 1) 50%,
+        $third 51%
+      );
+    }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes container-spinner {
+  from {
+    display: block;
+  }
+  to {
+    visibility: hidden;
   }
 }
 
