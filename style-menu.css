@@ -185,14 +185,40 @@ main {
   margin-top: 5px;
   margin-bottom: -20px;
 }
-.restaurants__card a .restaurants__card__text i {
+.restaurants__card a .restaurants__card__text .heart {
+  width: fit-content;
+  position: relative;
+  top: 0px;
+  left: 85%;
+  transition: 0.3s ease-in-out;
+}
+.restaurants__card a .restaurants__card__text .heart .heart-empty {
+  position: relative;
+  top: -18px;
+  left: 85%;
+  cursor: pointer;
+  font-size: 25px;
+  transition: 0.3s ease-in-out;
+}
+.restaurants__card a .restaurants__card__text .heart .heart-full {
+  display: none;
   cursor: pointer;
   position: relative;
   top: -18px;
   left: 85%;
-  font-size: 25px;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
 }
-.restaurants__card a .restaurants__card__new {
+.restaurants__card a .restaurants__card__text .heart:hover .heart-empty {
+  display: none;
+}
+.restaurants__card a .restaurants__card__text .heart:hover .heart-full {
+  display: block;
+  font-size: 25px;
+  color: #9356dc;
+  color: linear-gradient(180deg, rgb(147, 86, 220) 44%, rgb(255, 121, 218) 94%);
+}
+.restaurants__card .restaurants__card__new {
   width: fit-content;
   background-color: #99e2d0;
   color: #0f8368;
@@ -410,6 +436,7 @@ body {
   background-color: rgb(223, 223, 223);
 }
 #menu .menu__title {
+  max-width: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -425,6 +452,39 @@ body {
 }
 #menu .menu__title i.heart-full {
   display: none;
+}
+#menu .menu__title__heart {
+  width: fit-content;
+  position: relative;
+  top: 17px;
+  right: 10%;
+  transition: 0.3s ease-in-out;
+}
+#menu .menu__title__heart .heart-empty {
+  position: relative;
+  top: -18px;
+  left: 85%;
+  cursor: pointer;
+  font-size: 25px;
+  transition: 0.3s ease-in-out;
+}
+#menu .menu__title__heart .heart-full {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  top: -18px;
+  left: 85%;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+}
+#menu .menu__title__heart:hover .heart-empty {
+  display: none;
+}
+#menu .menu__title__heart:hover .heart-full {
+  display: block;
+  font-size: 25px;
+  color: #9356dc;
+  color: linear-gradient(180deg, rgb(147, 86, 220) 44%, rgb(255, 121, 218) 94%);
 }
 #menu .menu__content {
   max-width: 650px;
