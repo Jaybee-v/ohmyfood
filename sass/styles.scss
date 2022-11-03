@@ -214,45 +214,6 @@ main {
           margin-top: 5px;
           margin-bottom: -20px;
         }
-        .heart {
-          width: fit-content;
-          position: relative;
-          top: 0px;
-          left: 85%;
-          transition: 0.3s ease-in-out;
-          .heart-empty {
-            position: relative;
-            top: -18px;
-            left: 85%;
-            cursor: pointer;
-            font-size: 25px;
-            transition: 0.3s ease-in-out;
-          }
-          .heart-full {
-            display: none;
-            cursor: pointer;
-            position: relative;
-            top: -18px;
-            left: 85%;
-            font-size: 25px;
-            transition: 0.5s ease-in-out;
-          }
-          &:hover {
-            .heart-empty {
-              display: none;
-            }
-            .heart-full {
-              display: block;
-              font-size: 25px;
-              color: #9356dc;
-              color: linear-gradient(
-                180deg,
-                rgba(147, 86, 220, 1) 44%,
-                rgba(255, 121, 218, 1) 94%
-              );
-            }
-          }
-        }
       }
     }
     .restaurants__card__new {
@@ -266,6 +227,68 @@ main {
       border-radius: 3px;
       font-weight: 900;
     }
+  }
+}
+.heart {
+  width: fit-content;
+  position: relative;
+  top: 0px;
+  left: 85%;
+  transition: 0.3s ease-in-out;
+  .heart-empty {
+    position: relative;
+    top: -18px;
+    left: 85%;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.3s ease-in-out;
+  }
+  .heart-full {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    top: -18px;
+    left: 85%;
+    font-size: 25px;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+      both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    transition: 0.5s ease-in-out;
+  }
+  &:hover {
+    .heart-empty {
+      display: none;
+    }
+    .heart-full {
+      display: block;
+      font-size: 25px;
+      color: #9356dc;
+      color: linear-gradient(
+        180deg,
+        rgba(147, 86, 220, 1) 44%,
+        rgba(255, 121, 218, 1) 94%
+      );
+    }
+  }
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -390,13 +413,6 @@ main {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
-    &__card {
-      a {
-        .restaurants__card__new {
-          left: 65%;
-        }
-      }
-    }
   }
   .footer {
     &__title {
@@ -444,6 +460,9 @@ main {
     &__all {
       grid-template-columns: repeat(4, 1fr);
     }
+  }
+  .restaurants__card__new {
+    right: 10%;
   }
   .footer {
     margin-top: 0;
