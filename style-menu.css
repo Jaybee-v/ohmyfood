@@ -531,22 +531,28 @@ body {
   margin-bottom: 15px;
   overflow: hidden;
 }
-#menu .menu__content .menu__meal h2 {
-  font-size: 15px;
-}
-#menu .menu__content .menu__meal .description {
+#menu .menu__content .menu__meal .meal-and-price {
   overflow: hidden;
-  white-space: nowrap;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-#menu .menu__content .menu__meal .description p {
+#menu .menu__content .menu__meal .meal-and-price .meal__title h2 {
+  font-size: 15px;
+}
+#menu .menu__content .menu__meal .meal-and-price .meal__subtitle {
+  white-space: nowrap;
+  display: flex;
+}
+#menu .menu__content .menu__meal .meal-and-price .meal__subtitle p {
+  overflow: hidden;
   white-space: nowrap;
   overflow: hidden;
   margin-top: 5px;
   font-size: 12px;
 }
-#menu .menu__content .menu__meal .description .price {
+#menu .menu__content .menu__meal .meal-and-price .meal__price {
   font-weight: 800;
 }
 #menu .menu__content .menu__meal__valid {
@@ -570,9 +576,9 @@ body {
   color: white;
   font-size: 30px;
 }
-#menu .menu__content .menu__meal:hover .menu__meal .description .price {
-  -webkit-animation: slide-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+#menu .menu__content .menu__meal:hover .meal__price {
+  -webkit-animation: slide-desc 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-desc 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 #menu .menu__content .menu__meal:hover .menu__meal__valid {
   display: flex;
@@ -614,18 +620,18 @@ body {
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
   }
 }
 @keyframes slide-desc {
   0% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-  }
-  100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
   }
 }
 .meal-1 {
@@ -699,8 +705,8 @@ body {
 }
 @-webkit-keyframes scale-up-center {
   0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
   }
   100% {
     -webkit-transform: scale(1);
@@ -709,8 +715,8 @@ body {
 }
 @keyframes scale-up-center {
   0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
   }
   100% {
     -webkit-transform: scale(1);
