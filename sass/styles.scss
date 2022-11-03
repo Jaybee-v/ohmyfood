@@ -195,6 +195,7 @@ main {
       text-decoration: none;
       color: black;
       .restaurants__card__image {
+        position: relative;
         img {
           max-height: 180px;
           height: 100%;
@@ -206,7 +207,6 @@ main {
       .restaurants__card__text {
         padding: 15px;
         h3 {
-          margin-top: -30px;
           font-size: 15px;
         }
         p {
@@ -258,18 +258,14 @@ main {
       width: fit-content;
       background-color: $third;
       color: #0f8368;
-      position: relative;
-      left: 70%;
-      top: -170px;
+      position: absolute;
+      right: 5%;
+      top: 10px;
       padding: 7px 15px;
       border-radius: 3px;
       font-weight: 900;
     }
   }
-}
-
-.without-new {
-  margin-top: 35px;
 }
 
 .footer {
@@ -452,6 +448,7 @@ main {
     margin-top: 0;
   }
   .container__spinner {
+    max-width: 1440px;
     .spinner {
       margin: auto;
       justify-content: center;

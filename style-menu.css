@@ -266,7 +266,7 @@ main {
   height: 100%;
   width: 100%;
   animation-name: container-spinner;
-  animation-duration: 2s;
+  animation-duration: 3s;
   background-color: rgba(255, 255, 255, 0.7);
   animation-fill-mode: forwards;
 }
@@ -276,7 +276,7 @@ main {
   left: calc(50% - 10vh);
   width: 20vh;
   height: 20vh;
-  animation: spinner 2s linear infinite;
+  animation: spinner 3s linear infinite;
   animation-iteration-count: 1;
 }
 .container__spinner .spinner span {
@@ -388,6 +388,13 @@ main {
   }
   .footer {
     margin-top: 0;
+  }
+  .container__spinner {
+    max-width: 1440px;
+  }
+  .container__spinner .spinner {
+    margin: auto;
+    justify-content: center;
   }
 }
 body {
@@ -537,45 +544,70 @@ body {
 
 .meal-1 {
   animation-name: meal;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 .meal-2 {
-  animation-duration: 2.5s;
+  animation-duration: 1.5s;
   animation-name: meal-2;
 }
 
 .meal-3 {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: meal-3;
 }
 
+.meal-4 {
+  animation-duration: 2.5s;
+  animation-name: meal-4;
+}
+
 @keyframes meal {
-  from {
+  0% {
     opacity: 0;
-    margin-top: 10px;
+    transform: translateY(15px);
   }
-  to {
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
 @keyframes meal-2 {
-  from {
-    display: none;
+  0% {
     opacity: 0;
-    margin-top: 30px;
+    transform: translateY(30px);
   }
-  to {
+  50% {
+    opacity: 0;
+  }
+  100% {
     display: block;
     opacity: 1;
   }
 }
 @keyframes meal-3 {
-  from {
+  0% {
     opacity: 0;
-    margin-top: 30px;
+    transform: translateY(30px);
   }
-  to {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-4 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
