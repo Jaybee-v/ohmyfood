@@ -306,7 +306,7 @@ main {
   height: 100%;
   width: 100%;
   animation-name: container-spinner;
-  animation-duration: 2s;
+  animation-duration: 3s;
   background-color: rgba(255, 255, 255, 0.7);
   animation-fill-mode: forwards;
   .spinner {
@@ -315,7 +315,7 @@ main {
     left: calc(50% - #{$size / 2});
     width: $size;
     height: $size;
-    animation: spinner 2s linear infinite;
+    animation: spinner 3s linear infinite;
     animation-iteration-count: 1;
     span {
       position: absolute;
@@ -450,5 +450,11 @@ main {
   }
   .footer {
     margin-top: 0;
+  }
+  .container__spinner {
+    .spinner {
+      margin: auto;
+      justify-content: center;
+    }
   }
 }

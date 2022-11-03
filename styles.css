@@ -264,7 +264,7 @@ main {
   height: 100%;
   width: 100%;
   animation-name: container-spinner;
-  animation-duration: 2s;
+  animation-duration: 3s;
   background-color: rgba(255, 255, 255, 0.7);
   animation-fill-mode: forwards;
 }
@@ -274,7 +274,7 @@ main {
   left: calc(50% - 10vh);
   width: 20vh;
   height: 20vh;
-  animation: spinner 2s linear infinite;
+  animation: spinner 3s linear infinite;
   animation-iteration-count: 1;
 }
 .container__spinner .spinner span {
@@ -386,6 +386,10 @@ main {
   }
   .footer {
     margin-top: 0;
+  }
+  .container__spinner .spinner {
+    margin: auto;
+    justify-content: center;
   }
 }
 
