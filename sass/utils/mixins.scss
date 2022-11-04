@@ -1,0 +1,33 @@
+@mixin button {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(
+    -10deg,
+    rgba(147, 86, 220, 1) 28%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px #ccc, -3px 3px 3px #ccc;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 15px;
+  &:hover {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(
+      -10deg,
+      rgba(147, 86, 220, 0.8) 28%,
+      rgba(255, 121, 218, 0.8) 100%
+    );
+    box-shadow: 3px 3px 3px rgb(147, 147, 147), -3px 3px 3px rgb(147, 147, 147);
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

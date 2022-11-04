@@ -1,43 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-$primary: #9356dc;
-$secondary: #ff79da;
-$third: #99e2d0;
-$size: 20vh;
-
-@mixin button {
-  margin-top: 15px;
-  margin-bottom: 35px;
-  background: rgb(147, 86, 220);
-  background: linear-gradient(
-    -10deg,
-    rgba(147, 86, 220, 1) 28%,
-    rgba(255, 121, 218, 1) 100%
-  );
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 25px;
-  box-shadow: 3px 3px 3px #ccc, -3px 3px 3px #ccc;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  font-size: 15px;
-  &:hover {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(
-      -10deg,
-      rgba(147, 86, 220, 0.8) 28%,
-      rgba(255, 121, 218, 0.8) 100%
-    );
-    box-shadow: 3px 3px 3px rgb(147, 147, 147), -3px 3px 3px rgb(147, 147, 147);
-  }
-}
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import 'variables/variables';
+@import 'utils/mixins';
+@import 'utils/keyframes';
 
 * {
   margin: 0;
@@ -271,26 +237,6 @@ main {
     }
   }
 }
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
 
 .footer {
   margin-top: 45px;
@@ -352,23 +298,6 @@ main {
         $third 51%
       );
     }
-  }
-}
-
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes container-spinner {
-  from {
-    display: block;
-  }
-  to {
-    visibility: hidden;
   }
 }
 
