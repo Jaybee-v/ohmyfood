@@ -212,33 +212,40 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 40%;
 }
 
 main {
   max-width: 650px;
 }
 
+.location {
+  font-size: 13px;
+  font-weight: 600;
+}
 .location__div {
   padding: 10px 0;
   text-align: center;
-  background-color: rgb(222, 221, 221);
+  background-color: rgb(229, 229, 229);
 }
 .location__div i {
   padding: 0 15px 0 0;
 }
 
 .our-restaurants {
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(237, 237, 237);
   text-align: center;
 }
 .our-restaurants__title h1 {
-  font-size: 25px;
+  font-size: 21px;
+  font-weight: 900;
   width: 75%;
   margin: auto;
-  padding: 20px 0;
+  padding: 30px 0 15px 0;
 }
 .our-restaurants__title p {
+  font-size: 14px;
+  color: rgb(104, 104, 104);
   width: 85%;
   padding-bottom: 10px;
   margin: auto;
@@ -257,7 +264,7 @@ main {
   box-shadow: 3px 3px 3px #ccc, -3px 3px 3px #ccc;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  font-size: 15px;
+  font-size: 13px;
 }
 .btn:hover {
   background: rgb(147, 86, 220);
@@ -266,7 +273,7 @@ main {
 }
 
 .section__title h2 {
-  font-size: 15px;
+  font-size: 20px;
   padding: 30px 20px;
 }
 
@@ -297,23 +304,21 @@ main {
   margin-top: 4px;
 }
 .functioning__step__btn {
-  margin: auto;
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
   width: 90%;
-  padding: 15px 35px 15px 0px;
+  padding: 20px 35px 20px 0px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .functioning__step__btn i {
   color: gray;
-  padding: 0 20px 0 0;
+  padding: 0 4% 0 0;
 }
 .functioning__step__btn__last {
   background-color: rgba(146, 86, 220, 0.3098039216);
-  margin: auto;
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
   width: 90%;
   padding: 15px 35px 15px 0px;
@@ -325,7 +330,7 @@ main {
 }
 .functioning__step__btn__last i {
   color: #9356dc;
-  padding: 0 20px 0 0;
+  padding: 0 4% 0 0;
 }
 .functioning__step__btn__last:hover {
   background-color: rgba(146, 86, 220, 0.2235294118);
@@ -348,7 +353,7 @@ main {
   margin-right: auto;
   margin-bottom: 20px;
   width: 90%;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 2px 2px 5px rgba(153, 153, 153, 0.367), -2px 2px 5px rgba(153, 153, 153, 0.367);
 }
 .restaurants__card a {
@@ -362,11 +367,12 @@ main {
   max-height: 180px;
   height: 100%;
   width: 100%;
-  border-radius: 10px 10px 0 0;
+  border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
 .restaurants__card a .restaurants__card__text {
-  padding: 15px;
+  position: relative;
+  padding: 15px 25px 35px 15px;
 }
 .restaurants__card a .restaurants__card__text h3 {
   font-size: 15px;
@@ -382,22 +388,23 @@ main {
   position: absolute;
   right: 5%;
   top: 10px;
-  padding: 7px 15px;
+  padding: 7px 10px;
   border-radius: 3px;
   font-weight: 900;
+  font-size: 13px;
 }
 
 .heart {
   width: fit-content;
-  position: relative;
-  top: 0px;
-  left: 85%;
+  position: absolute;
+  top: 30%;
+  left: 80%;
   transition: 0.3s ease-in-out;
 }
 .heart .heart-empty {
-  position: relative;
-  top: -18px;
-  left: 85%;
+  position: absolute;
+  top: 50%;
+  left: 80%;
   cursor: pointer;
   font-size: 25px;
   transition: 0.3s ease-in-out;
@@ -405,9 +412,9 @@ main {
 .heart .heart-full {
   display: none;
   cursor: pointer;
-  position: relative;
-  top: -18px;
-  left: 85%;
+  position: absolute;
+  top: 50%;
+  left: 80%;
   font-size: 25px;
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -443,8 +450,11 @@ main {
   font-size: 12px;
   padding: 5px 0;
 }
-.footer__parts ul li i {
+.footer__parts ul li:nth-child(2) i {
   padding: 0 5px 0 0px;
+}
+.footer__parts ul li i {
+  padding: 0 10px 0 0px;
 }
 .footer__parts ul li a {
   color: white;

@@ -28,7 +28,7 @@ body {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 30%;
+      width: 40%;
     }
   }
 }
@@ -37,10 +37,12 @@ main {
   max-width: 650px;
 }
 .location {
+  font-size: 13px;
+  font-weight: 600;
   &__div {
     padding: 10px 0;
     text-align: center;
-    background-color: rgb(222, 221, 221);
+    background-color: rgb(229, 229, 229);
     i {
       padding: 0 15px 0 0;
     }
@@ -48,16 +50,19 @@ main {
 }
 
 .our-restaurants {
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(237, 237, 237);
   text-align: center;
   &__title {
     h1 {
-      font-size: 25px;
+      font-size: 21px;
+      font-weight: 900;
       width: 75%;
       margin: auto;
-      padding: 20px 0;
+      padding: 30px 0 15px 0;
     }
     p {
+      font-size: 14px;
+      color: rgb(104, 104, 104);
       width: 85%;
       padding-bottom: 10px;
       margin: auto;
@@ -71,7 +76,7 @@ main {
 
 .section__title {
   h2 {
-    font-size: 15px;
+    font-size: 20px;
     padding: 30px 20px;
   }
 }
@@ -98,24 +103,22 @@ main {
       }
     }
     &__btn {
-      margin: auto;
       box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
         -3px 3px 5px rgba(153, 153, 153, 0.267);
       width: 90%;
-      padding: 15px 35px 15px 0px;
+      padding: 20px 35px 20px 0px;
       border: none;
-      border-radius: 10px;
+      border-radius: 20px;
       font-weight: 600;
       cursor: pointer;
       transition: 0.3s ease-in-out;
       i {
         color: gray;
-        padding: 0 20px 0 0;
+        padding: 0 4% 0 0;
       }
 
       &__last {
         background-color: #9256dc4f;
-        margin: auto;
         box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
           -3px 3px 5px rgba(153, 153, 153, 0.267);
         width: 90%;
@@ -127,7 +130,7 @@ main {
         transition: 0.3s ease-in-out;
         i {
           color: $primary;
-          padding: 0 20px 0 0;
+          padding: 0 4% 0 0;
         }
         &:hover {
           background-color: #9256dc39;
@@ -155,7 +158,7 @@ main {
     margin-right: auto;
     margin-bottom: 20px;
     width: 90%;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 2px 2px 5px rgb(153, 153, 153, 0.367),
       -2px 2px 5px rgba(153, 153, 153, 0.367);
     a {
@@ -167,12 +170,13 @@ main {
           max-height: 180px;
           height: 100%;
           width: 100%;
-          border-radius: 10px 10px 0 0;
+          border-radius: 15px 15px 0 0;
           object-fit: cover;
         }
       }
       .restaurants__card__text {
-        padding: 15px;
+        position: relative;
+        padding: 15px 25px 35px 15px;
         h3 {
           font-size: 15px;
         }
@@ -189,22 +193,23 @@ main {
       position: absolute;
       right: 5%;
       top: 10px;
-      padding: 7px 15px;
+      padding: 7px 10px;
       border-radius: 3px;
       font-weight: 900;
+      font-size: 13px;
     }
   }
 }
 .heart {
   width: fit-content;
-  position: relative;
-  top: 0px;
-  left: 85%;
+  position: absolute;
+  top: 30%;
+  left: 80%;
   transition: 0.3s ease-in-out;
   .heart-empty {
-    position: relative;
-    top: -18px;
-    left: 85%;
+    position: absolute;
+    top: 50%;
+    left: 80%;
     cursor: pointer;
     font-size: 25px;
     transition: 0.3s ease-in-out;
@@ -212,9 +217,9 @@ main {
   .heart-full {
     display: none;
     cursor: pointer;
-    position: relative;
-    top: -18px;
-    left: 85%;
+    position: absolute;
+    top: 50%;
+    left: 80%;
     font-size: 25px;
     -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
       both;
@@ -256,8 +261,13 @@ main {
         font-weight: 500;
         font-size: 12px;
         padding: 5px 0;
+        &:nth-child(2) {
+          i {
+            padding: 0 5px 0 0px;
+          }
+        }
         i {
-          padding: 0 5px 0 0px;
+          padding: 0 10px 0 0px;
         }
         a {
           color: white;
