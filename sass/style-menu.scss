@@ -29,7 +29,6 @@ body {
 .image {
   height: fit-content;
   img {
-    border-radius: -30px;
     max-width: 992px;
     width: 100%;
     max-height: 250px;
@@ -107,9 +106,11 @@ body {
       }
     }
     &__content {
+      margin-top: 10px;
       max-width: 650px;
       width: 100%;
       &__bloc {
+        margin-bottom: 35px;
         .menu__title {
           padding: 0 0 0 5%;
           text-transform: uppercase;
@@ -117,7 +118,7 @@ body {
           h3 {
             font-weight: 400;
             position: relative;
-
+            margin-bottom: 5px;
             &::after {
               content: '';
               width: 50px;
@@ -176,7 +177,7 @@ body {
             display: flex;
             align-items: end;
             font-weight: 800;
-            transition: 0.5s ease-in-out;
+            transition: 1s ease;
           }
         }
         &__valid {
@@ -212,16 +213,6 @@ body {
       }
     }
   }
-}
-.menu__content__bloc.dishes {
-  animation-delay: 2s;
-  animation-duration: 0ms;
-  animation-name: dishes;
-}
-.menu__content__bloc.desserts {
-  animation-delay: 4s;
-  animation-duration: 0ms;
-  animation-name: desserts;
 }
 
 .meal-1 {
@@ -267,6 +258,10 @@ body {
 
 .command-btn {
   @include center;
+  button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 650px) {
