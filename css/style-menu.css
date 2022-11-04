@@ -888,6 +888,9 @@ body {
   #menu .menu__content__meal {
     width: 92%;
   }
+  .command-btn {
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=style-menu.css.map */
