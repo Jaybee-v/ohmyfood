@@ -71,6 +71,7 @@
 }
 
 // LOADING MENU ANIMATION
+
 @keyframes meal {
   0% {
     opacity: 0;
@@ -111,6 +112,31 @@
 @keyframes meal-4 {
   0% {
     opacity: 0;
+    transform: translateY(15px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-5 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes meal-6 {
+  0% {
+    opacity: 0;
     transform: translateY(30px);
   }
   50% {
@@ -120,3 +146,64 @@
     opacity: 1;
   }
 }
+@keyframes meal-7 {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-8 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes meal-9 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-10 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// @keyframes meal-4 {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(30px);
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }

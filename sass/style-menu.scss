@@ -21,6 +21,9 @@ body {
   }
   &__logo {
     border-bottom: none;
+    img {
+      width: 40% !important;
+    }
   }
 }
 .image {
@@ -92,12 +95,13 @@ body {
           .heart-full {
             display: block;
             font-size: 25px;
-            color: #9356dc;
-            color: linear-gradient(
-              180deg,
+            background: linear-gradient(
+              to bottom,
               rgba(147, 86, 220, 1) 44%,
               rgba(255, 121, 218, 1) 94%
             );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
         }
       }
@@ -209,6 +213,16 @@ body {
     }
   }
 }
+.menu__content__bloc.dishes {
+  animation-delay: 2s;
+  animation-duration: 0ms;
+  animation-name: dishes;
+}
+.menu__content__bloc.desserts {
+  animation-delay: 4s;
+  animation-duration: 0ms;
+  animation-name: desserts;
+}
 
 .meal-1 {
   animation-name: meal;
@@ -225,6 +239,30 @@ body {
 .meal-4 {
   animation-duration: 2.5s;
   animation-name: meal-4;
+}
+.meal-5 {
+  animation-duration: 3s;
+  animation-name: meal-5;
+}
+.meal-6 {
+  animation-duration: 3.5s;
+  animation-name: meal-6;
+}
+.meal-7 {
+  animation-duration: 4s;
+  animation-name: meal-7;
+}
+.meal-8 {
+  animation-duration: 4.5s;
+  animation-name: meal-8;
+}
+.meal-9 {
+  animation-duration: 5s;
+  animation-name: meal-8;
+}
+.meal-10 {
+  animation-duration: 5.5s;
+  animation-name: meal-10;
 }
 
 .command-btn {

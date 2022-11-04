@@ -108,6 +108,80 @@
 @keyframes meal-4 {
   0% {
     opacity: 0;
+    transform: translateY(15px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-5 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes meal-6 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-7 {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-8 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes meal-9 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-10 {
+  0% {
+    opacity: 0;
     transform: translateY(30px);
   }
   50% {
@@ -347,8 +421,9 @@ main {
 .heart:hover .heart-full {
   display: block;
   font-size: 25px;
-  color: #9356dc;
-  color: linear-gradient(180deg, rgb(147, 86, 220) 44%, rgb(255, 121, 218) 94%);
+  background: linear-gradient(to bottom, rgb(147, 86, 220) 44%, rgb(255, 121, 218) 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer {
@@ -520,6 +595,9 @@ body {
 .header__logo {
   border-bottom: none;
 }
+.header__logo img {
+  width: 40% !important;
+}
 
 .image {
   height: fit-content;
@@ -593,8 +671,9 @@ body {
 #menu .menu__title__heart:hover .heart-full {
   display: block;
   font-size: 25px;
-  color: #9356dc;
-  color: linear-gradient(180deg, rgb(147, 86, 220) 44%, rgb(255, 121, 218) 94%);
+  background: linear-gradient(to bottom, rgb(147, 86, 220) 44%, rgb(255, 121, 218) 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #menu .menu__content {
   max-width: 650px;
@@ -692,6 +771,18 @@ body {
   display: flex;
 }
 
+.menu__content__bloc.dishes {
+  animation-delay: 2s;
+  animation-duration: 0ms;
+  animation-name: dishes;
+}
+
+.menu__content__bloc.desserts {
+  animation-delay: 4s;
+  animation-duration: 0ms;
+  animation-name: desserts;
+}
+
 .meal-1 {
   animation-name: meal;
   animation-duration: 1s;
@@ -710,6 +801,36 @@ body {
 .meal-4 {
   animation-duration: 2.5s;
   animation-name: meal-4;
+}
+
+.meal-5 {
+  animation-duration: 3s;
+  animation-name: meal-5;
+}
+
+.meal-6 {
+  animation-duration: 3.5s;
+  animation-name: meal-6;
+}
+
+.meal-7 {
+  animation-duration: 4s;
+  animation-name: meal-7;
+}
+
+.meal-8 {
+  animation-duration: 4.5s;
+  animation-name: meal-8;
+}
+
+.meal-9 {
+  animation-duration: 5s;
+  animation-name: meal-8;
+}
+
+.meal-10 {
+  animation-duration: 5.5s;
+  animation-name: meal-10;
 }
 
 .command-btn {

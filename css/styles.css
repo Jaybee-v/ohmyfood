@@ -106,6 +106,80 @@
 @keyframes meal-4 {
   0% {
     opacity: 0;
+    transform: translateY(15px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-5 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes meal-6 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-7 {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-8 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes meal-9 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes meal-10 {
+  0% {
+    opacity: 0;
     transform: translateY(30px);
   }
   50% {
@@ -345,8 +419,9 @@ main {
 .heart:hover .heart-full {
   display: block;
   font-size: 25px;
-  color: #9356dc;
-  color: linear-gradient(180deg, rgb(147, 86, 220) 44%, rgb(255, 121, 218) 94%);
+  background: linear-gradient(to bottom, rgb(147, 86, 220) 44%, rgb(255, 121, 218) 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer {

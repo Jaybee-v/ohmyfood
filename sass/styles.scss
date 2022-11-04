@@ -228,12 +228,13 @@ main {
     .heart-full {
       display: block;
       font-size: 25px;
-      color: #9356dc;
-      color: linear-gradient(
-        180deg,
+      background: linear-gradient(
+        to bottom,
         rgba(147, 86, 220, 1) 44%,
         rgba(255, 121, 218, 1) 94%
       );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
