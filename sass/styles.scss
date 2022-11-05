@@ -303,8 +303,8 @@ main {
       background: linear-gradient(
         to right,
         rgba($primary, 0.5) 0%,
-        rgba($secondary, 1) 50%,
-        $third 51%
+        rgba($secondary, 0.8) 50%,
+        rgba($third, 0.5) 51%
       );
     }
   }
