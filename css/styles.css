@@ -348,6 +348,7 @@ main {
   width: 100%;
 }
 .restaurants__card {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -359,9 +360,6 @@ main {
   text-decoration: none;
   color: black;
 }
-.restaurants__card a .restaurants__card__image {
-  position: relative;
-}
 .restaurants__card a .restaurants__card__image img {
   max-height: 180px;
   height: 100%;
@@ -370,7 +368,6 @@ main {
   object-fit: cover;
 }
 .restaurants__card a .restaurants__card__text {
-  position: relative;
   padding: 15px 25px 35px 15px;
 }
 .restaurants__card a .restaurants__card__text h3 {
@@ -396,7 +393,7 @@ main {
 .heart {
   width: fit-content;
   position: absolute;
-  top: 30%;
+  top: 80%;
   left: 80%;
   transition: 0.3s ease-in-out;
 }

@@ -153,6 +153,7 @@ main {
   max-width: 768px;
   width: 100%;
   &__card {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -164,7 +165,6 @@ main {
       text-decoration: none;
       color: black;
       .restaurants__card__image {
-        position: relative;
         img {
           max-height: 180px;
           height: 100%;
@@ -174,7 +174,6 @@ main {
         }
       }
       .restaurants__card__text {
-        position: relative;
         padding: 15px 25px 35px 15px;
         h3 {
           font-size: 15px;
@@ -202,7 +201,7 @@ main {
 .heart {
   width: fit-content;
   position: absolute;
-  top: 30%;
+  top: 80%;
   left: 80%;
   transition: 0.3s ease-in-out;
   .heart-empty {
