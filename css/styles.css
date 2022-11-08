@@ -33,7 +33,7 @@
     box-shadow: 0 0 0 #9356dc, 0 0 0 #ff79da, 0 0 0 #99e2d0;
   }
   to {
-    box-shadow: 0 -7px 0 #9356dc, -7px 0 0 #ff79da, 0 7px 0 #99e2d0, 7px 0 0 #ff79da;
+    box-shadow: 0 -9px 0 #9356dc, -9px 0 0 #ff79da, 0 9px 0 #99e2d0, 9px 0 0 #ff79da;
   }
 }
 @keyframes spinner {
@@ -312,7 +312,7 @@ main {
   height: 20px;
   border-radius: 50%;
   position: relative;
-  left: 5%;
+  left: 3%;
   color: white;
 }
 .functioning__step__number p {
@@ -336,9 +336,9 @@ main {
   background-color: rgba(146, 86, 220, 0.3098039216);
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
   width: 90%;
-  padding: 15px 35px 15px 0px;
+  padding: 20px 35px 20px 0px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease-in-out;

@@ -95,7 +95,7 @@ main {
       height: 20px;
       border-radius: 50%;
       position: relative;
-      left: 5%;
+      left: 3%;
       color: white;
       p {
         margin-top: 4px;
@@ -121,9 +121,9 @@ main {
         box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
           -3px 3px 5px rgba(153, 153, 153, 0.267);
         width: 90%;
-        padding: 15px 35px 15px 0px;
+        padding: 20px 35px 20px 0px;
         border: none;
-        border-radius: 10px;
+        border-radius: 20px;
         font-weight: 600;
         cursor: pointer;
         transition: 0.3s ease-in-out;

@@ -34,8 +34,8 @@
     box-shadow: 0 0 0 $primary, 0 0 0 $secondary, 0 0 0 $third;
   }
   to {
-    box-shadow: 0 -7px 0 $primary, -7px 0 0 $secondary, 0 7px 0 $third,
-      7px 0 0 $secondary;
+    box-shadow: 0 -9px 0 $primary, -9px 0 0 $secondary, 0 9px 0 $third,
+      9px 0 0 $secondary;
   }
 }
 @keyframes spinner {
