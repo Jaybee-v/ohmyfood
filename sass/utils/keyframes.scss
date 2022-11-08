@@ -21,20 +21,37 @@
 }
 
 //  SPINNER HOMEPAGE ANIMATION
-@keyframes flip {
-  35% {
-    transform: rotateX(360deg);
-  }
-  100% {
-    transform: rotatex(360deg);
-  }
-}
 @keyframes container-spinner {
   from {
     display: block;
   }
   to {
     visibility: hidden;
+  }
+}
+@keyframes border-circle {
+  from {
+    box-shadow: 0 0 0 $primary, 0 0 0 $secondary, 0 0 0 $third;
+  }
+  to {
+    box-shadow: 0 -7px 0 $primary, -7px 0 0 $secondary, 0 7px 0 $third,
+      7px 0 0 $secondary;
+  }
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flip {
+  35% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotatex(360deg);
   }
 }
 

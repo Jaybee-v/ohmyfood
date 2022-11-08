@@ -20,20 +20,36 @@
     transform: scale(1);
   }
 }
-@keyframes flip {
-  35% {
-    transform: rotateX(360deg);
-  }
-  100% {
-    transform: rotatex(360deg);
-  }
-}
 @keyframes container-spinner {
   from {
     display: block;
   }
   to {
     visibility: hidden;
+  }
+}
+@keyframes border-circle {
+  from {
+    box-shadow: 0 0 0 #9356dc, 0 0 0 #ff79da, 0 0 0 #99e2d0;
+  }
+  to {
+    box-shadow: 0 -7px 0 #9356dc, -7px 0 0 #ff79da, 0 7px 0 #99e2d0, 7px 0 0 #ff79da;
+  }
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flip {
+  35% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotatex(360deg);
   }
 }
 @keyframes rotate {
@@ -468,7 +484,9 @@ main {
 }
 .container__spinner .spinner {
   width: fit-content;
+  height: 200px;
   padding: 20px;
+  align-items: center;
   display: flex;
   position: absolute;
   top: 50%;
@@ -476,7 +494,18 @@ main {
   transform: translate(-50%, -50%);
   background-color: rgba(153, 226, 208, 0.4980392157);
   border: 4px solid #99e2d0;
-  border-radius: 25px;
+  border-radius: 50%;
+}
+.container__spinner .spinner .circle {
+  top: -2%;
+  left: -4%;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #fff;
+  animation: spinner 3s linear infinite, border-circle 0.5s linear infinite alternate;
 }
 .container__spinner .spinner span {
   font-family: "Shrikhand";
@@ -492,28 +521,26 @@ main {
 .container__spinner .spinner > span:nth-child(even) {
   color: #9356dc;
 }
-.container__spinner .spinner > span:nth-child(2) {
+.container__spinner .spinner > span:nth-child(3) {
   animation-delay: 0.3s;
 }
-.container__spinner .spinner > span:nth-child(3) {
+.container__spinner .spinner > span:nth-child(4) {
   animation-delay: 0.6s;
 }
-.container__spinner .spinner > span:nth-child(4) {
+.container__spinner .spinner > span:nth-child(5) {
   animation-delay: 0.9s;
 }
-.container__spinner .spinner > span:nth-child(5) {
+.container__spinner .spinner > span:nth-child(6) {
   animation-delay: 1.2s;
 }
-.container__spinner .spinner > span:nth-child(6) {
+.container__spinner .spinner > span:nth-child(7) {
   animation-delay: 1.5s;
 }
-.container__spinner .spinner > span:nth-child(7) {
-  animation-delay: 1.8s;
-  color: #9356dc;
-}
 .container__spinner .spinner > span:nth-child(8) {
+  animation-delay: 1.8s;
+}
+.container__spinner .spinner > span:nth-child(9) {
   animation-delay: 2.1s;
-  color: #ff79da;
 }
 
 @media screen and (min-width: 650px) {
