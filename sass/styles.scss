@@ -116,7 +116,7 @@ main {
         padding: 0 4% 0 0;
       }
 
-      &__last {
+      &-last {
         background-color: #9256dc4f;
         box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
           -3px 3px 5px rgba(153, 153, 153, 0.267);
@@ -318,7 +318,6 @@ main {
       animation: flip 3s infinite linear;
       transform-origin: 0 70%;
       transform-style: preserve-3d;
-      -webkit-transform-style: preserve-3d;
       color: $secondary;
     }
     & > span:nth-child(even) {

@@ -332,7 +332,7 @@ main {
   color: gray;
   padding: 0 4% 0 0;
 }
-.functioning__step__btn__last {
+.functioning__step__btn-last {
   background-color: rgba(146, 86, 220, 0.3098039216);
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
   width: 90%;
@@ -343,11 +343,11 @@ main {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.functioning__step__btn__last i {
+.functioning__step__btn-last i {
   color: #9356dc;
   padding: 0 4% 0 0;
 }
-.functioning__step__btn__last:hover {
+.functioning__step__btn-last:hover {
   background-color: rgba(146, 86, 220, 0.2235294118);
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.8), -3px 3px 5px rgba(153, 153, 153, 0.8);
 }
@@ -515,7 +515,6 @@ main {
   animation: flip 3s infinite linear;
   transform-origin: 0 70%;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
   color: #ff79da;
 }
 .container__spinner .spinner > span:nth-child(even) {

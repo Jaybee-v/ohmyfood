@@ -22,20 +22,36 @@
     transform: scale(1);
   }
 }
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes container-spinner {
   from {
     display: block;
   }
   to {
     visibility: hidden;
+  }
+}
+@keyframes border-circle {
+  from {
+    box-shadow: 0 0 0 #9356dc, 0 0 0 #ff79da, 0 0 0 #99e2d0;
+  }
+  to {
+    box-shadow: 0 -9px 0 #9356dc, -9px 0 0 #ff79da, 0 9px 0 #99e2d0, 9px 0 0 #ff79da;
+  }
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flip {
+  35% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotatex(360deg);
   }
 }
 @keyframes rotate {
@@ -298,7 +314,7 @@ main {
   height: 20px;
   border-radius: 50%;
   position: relative;
-  left: 5%;
+  left: 3%;
   color: white;
 }
 .functioning__step__number p {
@@ -318,22 +334,22 @@ main {
   color: gray;
   padding: 0 4% 0 0;
 }
-.functioning__step__btn__last {
+.functioning__step__btn-last {
   background-color: rgba(146, 86, 220, 0.3098039216);
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
   width: 90%;
-  padding: 15px 35px 15px 0px;
+  padding: 20px 35px 20px 0px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.functioning__step__btn__last i {
+.functioning__step__btn-last i {
   color: #9356dc;
   padding: 0 4% 0 0;
 }
-.functioning__step__btn__last:hover {
+.functioning__step__btn-last:hover {
   background-color: rgba(146, 86, 220, 0.2235294118);
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.8), -3px 3px 5px rgba(153, 153, 153, 0.8);
 }
@@ -350,6 +366,7 @@ main {
   width: 100%;
 }
 .restaurants__card {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -361,9 +378,6 @@ main {
   text-decoration: none;
   color: black;
 }
-.restaurants__card a .restaurants__card__image {
-  position: relative;
-}
 .restaurants__card a .restaurants__card__image img {
   max-height: 180px;
   height: 100%;
@@ -372,7 +386,6 @@ main {
   object-fit: cover;
 }
 .restaurants__card a .restaurants__card__text {
-  position: relative;
   padding: 15px 25px 35px 15px;
 }
 .restaurants__card a .restaurants__card__text h3 {
@@ -398,7 +411,7 @@ main {
 .heart {
   width: fit-content;
   position: absolute;
-  top: 30%;
+  top: 80%;
   left: 80%;
   transition: 0.3s ease-in-out;
 }
@@ -472,22 +485,64 @@ main {
   animation-fill-mode: forwards;
 }
 .container__spinner .spinner {
+  width: fit-content;
+  height: 200px;
+  padding: 20px;
+  align-items: center;
+  display: flex;
   position: absolute;
-  top: calc(50% - 10vh);
-  left: calc(50% - 10vh);
-  width: 20vh;
-  height: 20vh;
-  animation: spinner 3s linear infinite;
-  animation-iteration-count: 1;
-}
-.container__spinner .spinner span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(153, 226, 208, 0.4980392157);
+  border: 4px solid #99e2d0;
   border-radius: 50%;
 }
-.container__spinner .spinner .spinner-inner-1 {
-  background: linear-gradient(to right, rgba(147, 86, 220, 0.5) 0%, #ff79da 50%, #99e2d0 51%);
+.container__spinner .spinner .circle {
+  top: -2%;
+  left: -4%;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #fff;
+  animation: spinner 3s linear infinite, border-circle 0.5s linear infinite alternate;
+}
+.container__spinner .spinner span {
+  font-family: "Shrikhand";
+  text-shadow: 2px 2px 3px rgb(255, 255, 255), -2px 2px 3px rgb(255, 255, 255);
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  animation: flip 3s infinite linear;
+  transform-origin: 0 70%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  color: #ff79da;
+}
+.container__spinner .spinner > span:nth-child(even) {
+  color: #9356dc;
+}
+.container__spinner .spinner > span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.container__spinner .spinner > span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.container__spinner .spinner > span:nth-child(5) {
+  animation-delay: 0.9s;
+}
+.container__spinner .spinner > span:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.container__spinner .spinner > span:nth-child(7) {
+  animation-delay: 1.5s;
+}
+.container__spinner .spinner > span:nth-child(8) {
+  animation-delay: 1.8s;
+}
+.container__spinner .spinner > span:nth-child(9) {
+  animation-delay: 2.1s;
 }
 
 @media screen and (min-width: 650px) {
