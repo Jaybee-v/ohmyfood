@@ -4,7 +4,7 @@
 @import 'styles';
 
 body {
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(243 243 243);
 }
 
 .header {
@@ -44,7 +44,7 @@ body {
     margin-top: -50px;
     width: 100%;
     border-radius: 30px 30px 0 0;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(243 243 243);
     &__title {
       max-width: 650px;
       @include center;
@@ -257,6 +257,7 @@ body {
 }
 
 .command-btn {
+  padding: 0px 0 25px 0;
   @include center;
   button {
     margin-top: 0;

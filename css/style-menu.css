@@ -362,6 +362,7 @@ main {
   background-color: rgba(204, 204, 204, 0.279);
   margin: auto;
   margin-top: 50px;
+  padding-bottom: 50px;
   max-width: 768px;
   width: 100%;
 }
@@ -446,7 +447,6 @@ main {
 }
 
 .footer {
-  margin-top: 45px;
   padding: 20px 0;
   background-color: rgb(50, 50, 50);
   color: white;
@@ -517,7 +517,6 @@ main {
   animation: flip 3s infinite linear;
   transform-origin: 0 70%;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
   color: #ff79da;
 }
 .container__spinner .spinner > span:nth-child(even) {
@@ -638,7 +637,7 @@ main {
   }
 }
 body {
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(243, 243, 243);
 }
 
 .header {
@@ -682,7 +681,7 @@ body {
   margin-top: -50px;
   width: 100%;
   border-radius: 30px 30px 0 0;
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(243, 243, 243);
 }
 #menu .menu__title {
   max-width: 650px;
@@ -890,6 +889,7 @@ body {
 }
 
 .command-btn {
+  padding: 0px 0 25px 0;
   display: flex;
   justify-content: center;
   align-items: center;
