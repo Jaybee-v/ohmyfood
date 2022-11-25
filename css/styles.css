@@ -332,7 +332,7 @@ main {
   color: gray;
   padding: 0 4% 0 0;
 }
-.functioning__step__btn-last {
+.functioning__step__btn:hover {
   background-color: rgba(146, 86, 220, 0.3098039216);
   box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.267), -3px 3px 5px rgba(153, 153, 153, 0.267);
   width: 90%;
@@ -343,17 +343,9 @@ main {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.functioning__step__btn-last i {
+.functioning__step__btn:hover i {
   color: #9356dc;
   padding: 0 4% 0 0;
-}
-.functioning__step__btn-last:hover {
-  background-color: rgba(146, 86, 220, 0.2235294118);
-  box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.8), -3px 3px 5px rgba(153, 153, 153, 0.8);
-}
-.functioning__step__btn:hover {
-  background-color: rgba(204, 204, 204, 0.115);
-  box-shadow: 3px 3px 5px rgba(153, 153, 153, 0.8), -3px 3px 5px rgba(153, 153, 153, 0.8);
 }
 
 .restaurants {

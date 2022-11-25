@@ -116,7 +116,7 @@ main {
         padding: 0 4% 0 0;
       }
 
-      &-last {
+      &:hover {
         background-color: #9256dc4f;
         box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.267),
           -3px 3px 5px rgba(153, 153, 153, 0.267);
@@ -131,16 +131,6 @@ main {
           color: $primary;
           padding: 0 4% 0 0;
         }
-        &:hover {
-          background-color: #9256dc39;
-          box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.8),
-            -3px 3px 5px rgba(153, 153, 153, 0.8);
-        }
-      }
-      &:hover {
-        background-color: rgba(204, 204, 204, 0.115);
-        box-shadow: 3px 3px 5px rgb(153, 153, 153, 0.8),
-          -3px 3px 5px rgba(153, 153, 153, 0.8);
       }
     }
   }
